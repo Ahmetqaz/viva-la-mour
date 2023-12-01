@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0;
+  padding: 14px 0;
   z-index: 1;
   transition: 0.2s ease-out;
   transition-property: opacity, transform, padding;
@@ -20,7 +20,6 @@
   }
   &.sticky {
     position: fixed;
-    padding: 20px 0;
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
   }

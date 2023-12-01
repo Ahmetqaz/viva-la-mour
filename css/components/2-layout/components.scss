@@ -3,11 +3,18 @@
   flex-direction: column;
   overflow: hidden;
   min-height: 100%;
+  padding-top: 108px;
 }
 .autoContainer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
+  &--sm {
+    max-width: 1324px;
+  }
+  &--extraSm {
+    max-width: 1190px;
+  }
 }
 .input {
   display: flex;
@@ -49,6 +56,7 @@
         align-items: center;
         gap: 14px;
         @include transition;
+        background-color: $black;
         &:hover {
           .text {
             color: $primary;
@@ -56,9 +64,11 @@
         }
       }
       &__dropdown {
+        font-size: 18px;
+        padding: 0.4em 1em 1.45em 1em;
         position: absolute;
-        top: calc(100% - 3px);
         width: 100%;
+        top: 100%;
         max-height: 0;
         opacity: 0;
         overflow: hidden;
@@ -68,17 +78,18 @@
         @include transition;
         @include hideScroll;
         border-top: unset;
+        display: flex;
+        flex-direction: column;
         z-index: 1;
+        gap: 35px;
+        background-color: $black;
         &-item {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 14px;
-          padding: 1.5em 1.38em;
           cursor: pointer;
           @include transition;
-          &:nth-child(2) {
-            padding: 0.6em 1.38em;
-          }
           &:hover {
             .text {
               color: $primary;
@@ -104,7 +115,6 @@
         border-radius: 1.1em 1.1em 0 0;
       }
       &__dropdown {
-        top: 100%;
         max-height: 30vh;
         overflow-y: auto;
         opacity: 1;
@@ -459,6 +469,9 @@
 }
 .text {
   font-family: inherit;
+  &--primary {
+    color: $primary;
+  }
 }
 .dropdown {
   position: relative;
@@ -476,6 +489,7 @@
     pointer-events: none;
     max-height: 0;
     @include transition;
+    background-color: $black;
     &-item {
       color: $white;
       font-size: 18px;

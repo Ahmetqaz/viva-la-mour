@@ -1,0 +1,110 @@
+.hero {
+  height: calc(100vh - 128px);
+  height: calc(100dvh - 128px);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .autoContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+.about {
+  padding: 114px 0 50px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  &__image {
+    width: calc(50% - 20px);
+    max-width: 512px;
+    .ratioImage {
+      border-radius: 50% 50% 50% 0;
+      overflow: hidden;
+      padding-bottom: 100%;
+    }
+  }
+  &__content {
+    width: calc(50% - 20px);
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      font-weight: 600;
+      color: $gray;
+    }
+  }
+}
+.team {
+  padding: 50px 0 150px;
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    max-width: 995px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    .ico {
+      width: 30px;
+      height: 30p;
+    }
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1420px;
+    height: 120%;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
