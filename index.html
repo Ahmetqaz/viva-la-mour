@@ -6,7 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <!-- <link rel="icon" href="images/logo-small.svg" /> -->
   <title>Home</title>
 </head>
@@ -14,40 +18,160 @@
 <body>
   <div class="main">
     <!-- #header -->
-    <!-- <header class="header" id="header">
-        <div class="autoContainer">
-          <div class="header__inner">
-            <a href="/" class="header__inner-logo">
-              <span class="logo">
-                <img src="images/logo-white.svg" alt="%ProjectName%" />
-              </span>
-            </a>
-            <div class="nav" id="menu">
-              <div class="nav__inner">
-                <div class="nav__inner-group">
-                  <a href="" class="nav__inner-link">Utility</a>
-                  <a href="" class="nav__inner-link">Tokenomics</a>
-                  <a href="" class="nav__inner-link">Roadmap</a>
-                  <a href="" class="nav__inner-link">WhitePaper</a>
+    <header class="header">
+      <div class="autoContainer">
+        <div class="header__inner">
+          <div class="logo logo--hideDesktop">
+            Viva La’mour
+          </div>
+          <div class="burger">
+            <span>
+            </span>
+          </div>
+          <nav class="nav">
+            <div class="nav__inner">
+              <div class="nav__inner-container">
+                <div class="logo logo--hideMob">
+                  Viva La’mour
                 </div>
-                <div class="nav__inner-buttons">
-                  <button class="butto button--boder">Connect Wallet</button>
-                  <button class="butto button--primary">Collect</button>
+                <div class="nav__group">
+                  <div class="dropdown">
+                    <button class="button button--ico dropdown__button tabBtn" data-tab="#tab-1">
+                      <span class="text">
+                        Viva La Mour
+                        <br>
+                        Wedding House
+                      </span>
+                      <span class="ico">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.49519 11.25L-3.78487e-06 -1.81981e-07L12.9904 9.53674e-07L6.49519 11.25Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="dropdown__content tabEvent" id="tab-1">
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Koynekler
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Sach we make up
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Gelinlerimiz
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button class="button button--ico dropdown__button tabBtn" data-tab="#tab-2">
+                      <span class="text">
+                        Viva Beauty
+                      </span>
+                      <span class="ico">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.49519 11.25L-3.78487e-06 -1.81981e-07L12.9904 9.53674e-07L6.49519 11.25Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="dropdown__content tabEvent" id="tab-2">
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Sach
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Make up
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Nails
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button class="button button--ico dropdown__button tabBtn" data-tab="#tab-3">
+                      <span class="text">
+                        Viva La Mour
+                        <br>
+                        Production
+                      </span>
+                      <span class="ico">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.49519 11.25L-3.78487e-06 -1.81981e-07L12.9904 9.53674e-07L6.49519 11.25Z"
+                            fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="dropdown__content tabEvent" id="tab-3">
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Photo Session
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Open Party
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown__content-item">
+                        <span class="text">
+                          Love Story
+                        </span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="input input--select">
+                <input type="hidden">
+                <div class="input__selected">
+                </div>
+                <ul class="input__dropdown">
+                  <li class="input__dropdown-item" data-value="En" data-default>
+                    <span class="text">
+                      En
+                    </span>
+                    <span class="ico">
+                      <img src="./images/language/english.svg" alt="ico">
+                    </span>
+                  </li>
+                  <li class="input__dropdown-item" data-value="Tkm">
+                    <span class="text">
+                      Tkm
+                    </span>
+                    <span class="ico">
+                      <img src="./images/language/turkmen.svg" alt="ico">
+                    </span>
+                  </li>
+                  <li class="input__dropdown-item" data-value="Rus">
+                    <span class="text">
+                      Rus
+                    </span>
+                    <span class="ico">
+                      <img src="./images/language/russian.svg" alt="ico">
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <button class="burger" id="menuBtn"></button>
-          </div>
+          </nav>
         </div>
-      </header> -->
+      </div>
+    </header>
     <!-- #header end -->
 
     <!-- #hero -->
     <section class="hero">
       <div class="autoContainer">
-        <button class="button button--primary">
-          Primary
-        </button>
       </div>
     </section>
     <!-- #hero end -->
@@ -60,8 +184,8 @@
     </footer>
     <!-- #footer end -->
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/customSelect.js"></script>
 </body>
 
 </html>
