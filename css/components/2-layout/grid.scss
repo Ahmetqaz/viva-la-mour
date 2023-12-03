@@ -1,0 +1,58 @@
+.grid {
+  padding: 90px 0 80px;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px 32px;
+  }
+  &__item {
+    width: calc(33.3% - 22px);
+    border-radius: 20px;
+    overflow: hidden;
+    .ratioImage {
+      padding-bottom: 100%;
+    }
+  }
+}
+
+@mixin grid-1160 {
+  .grid {
+    padding-top: 70px ;
+    &__row {
+      gap: 70px 32px;
+    }
+  }
+}
+@mixin grid-940 {
+  .grid {
+    &__row {
+      gap: 65px 32px;
+    }
+    &__item {
+      width: calc(50% - 16px);
+    }
+  }
+}
+
+@mixin grid-768{
+  .grid {
+    &__row {
+      gap: 65px 20px;
+    }
+    &__item {
+      width: calc(50% - 10px);
+      border-radius: 10px;
+    }
+  }
+}
+@mixin grid-460{
+  .grid {
+    &__row {
+      gap: 65px 20px;
+    }
+    &__item {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+}

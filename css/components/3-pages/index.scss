@@ -26,6 +26,29 @@
     height: 100%;
     width: 100%;
   }
+  &--sm {
+    padding-top: 10px;
+    height: auto;
+    min-height: 255px;
+    .hero {
+      &__image {
+        height: 255px;
+        min-height: 255px;
+        position: relative;
+        &-title {
+          display: block;
+          font-size: 54px;
+          text-shadow: 0px 0px 5px #f00;
+          font-family: $font-tertiary;
+          font-weight: 400;
+          position: absolute;
+          left: 90px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
 }
 .about {
   padding: 114px 0 50px;
@@ -231,11 +254,20 @@
     }
   }
 }
-
 @mixin index-1160 {
   .hero {
     &__image {
       border-radius: 30px;
+    }
+    &--sm {
+      .hero {
+        &__image {
+          &-title {
+            font-size: 48px;
+            left: 80px;
+          }
+        }
+      }
     }
   }
   .about {
@@ -284,6 +316,18 @@
       }
     }
   }
+  .hero {
+    &--sm {
+      .hero {
+        &__image {
+          &-title {
+            left: 50px;
+            font-size: 44px;
+          }
+        }
+      }
+    }
+  }
 }
 @mixin index-768 {
   .about {
@@ -292,6 +336,18 @@
   .hero {
     &__image {
       border-radius: 20px;
+    }
+    &--sm {
+      padding-top: 20px;
+      .hero {
+        &__image {
+          &-title {
+            left: 30px;
+            font-size: 38px;
+            font-weight: 700;
+          }
+        }
+      }
     }
   }
   .team {
@@ -317,6 +373,18 @@
   }
 }
 @mixin index-460 {
+  .hero {
+    &--sm {
+      padding-top: 40px;
+      .hero {
+        &__image {
+          &-title {
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
   .team {
     &__grid {
       &-column {

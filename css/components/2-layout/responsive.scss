@@ -8,6 +8,7 @@
   @include components-1160;
   @include header-1160;
   @include index-1160;
+  @include grid-1160;
 }
 @media (max-width: 1025px) {
   .autoContainer {
@@ -18,6 +19,7 @@
 }
 @media (max-width: 940px) {
   @include footer-940;
+  @include grid-940;
 }
 @media (max-width: 860px) {
   @include index-860;
@@ -28,6 +30,7 @@
   }
   @include index-768;
   @include footer-768;
+  @include grid-768;
 }
 @media (max-width: 580px) {
   ._hideMob {
@@ -38,4 +41,5 @@
   @include components-460;
   @include header-460;
   @include index-460;
+  @include grid-460;
 }
