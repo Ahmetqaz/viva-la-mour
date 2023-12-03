@@ -73,9 +73,9 @@
   cursor: pointer;
   display: block;
   position: relative;
-  font-size: 10px;
-  width: 2.6em;
-  height: 2em;
+  font-size: 12px;
+  width: 2.82em;
+  height: 1.82em;
   color: $white;
   background: transparent;
   transition: 0.2s ease;
@@ -84,42 +84,42 @@
   &::after,
   &::before {
     position: absolute;
-    left: 50%;
+    right: 50%;
     width: 100%;
-    height: 0.32em;
+    height: 3px;
     background-color: currentColor;
-    border-radius: 0.4em;
+    border-radius: 10px;
     transition: all 0.3s ease;
   }
   span {
+    width: 70%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
+    right: 0;
   }
   &::before {
     content: "";
     top: 0;
-    transform: translateX(-50%);
+    right: 0;
   }
   &::after {
     content: "";
     bottom: 0;
-    transform: translateX(-50%);
+    right: 0;
+    width: 40%;
   }
-
   &:hover {
     opacity: 0.8;
   }
-
   &.active {
-    color: $primary;
-
     &::before {
       top: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(0, -50%) rotate(-45deg);
     }
     &::after {
+      width: 100%;
       bottom: 50%;
-      transform: translate(-50%, 50%) rotate(-45deg);
+      transform: translate(0, 50%) rotate(45deg);
     }
     span {
       width: 0;
@@ -129,30 +129,55 @@
   }
 }
 
+@mixin header-1160 {
+  .nav {
+    &__inner {
+      gap: 14px;
+    }
+    &__group {
+      gap: 35px;
+    }
+  }
+}
 @mixin header-1025 {
   .header {
-    padding: 25px 0;
-
+    padding: 16px 0;
     &__inner {
       justify-content: space-between;
-
-      &-logo {
-        padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
-      }
+      padding: 20px;
+      border: 1px solid $black-3;
+      border-radius: 20px;
+      @include transition;
+      position: relative;
       .burger {
         display: block;
         z-index: 2;
       }
     }
+    .logo {
+      &--hide {
+        &Desktop {
+          display: block;
+        }
+        &Mob {
+          display: none;
+        }
+      }
+    }
+    &.active {
+      .header {
+        &__inner {
+          border-color: transparent;
+        }
+      }
+    }
   }
   .nav {
     position: fixed;
-    top: 0;
+    top: 94px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 94px);
     background: rgba($black, 0.4);
     backdrop-filter: blur(4px);
     z-index: 0;
@@ -166,52 +191,42 @@
       top: 0;
       left: 0;
       width: 35%;
-      min-width: 280px;
+      min-width: 300px;
       height: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      background: $white;
-      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
-      padding: 50px 25px;
+      background: $black;
       transform: translate(-100%);
       opacity: 0;
       transition: 0.15s ease-in-out 0s;
-
-      &-group {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 25px 0;
-        gap: 8px;
-        color: $black;
-        border-top: 1px solid $white;
-        width: 100%;
-
-        &:first-child {
-          border: 0;
-        }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 84px;
+      overflow: auto;
+      padding: 40px 20px;
+      &-container {
+        border: unset;
+        justify-content: center;
+        padding: unset;
+        flex: unset;
       }
-      &-link {
-        color: $black;
-
-        &:after {
-          left: 0;
-          top: 50%;
-          width: 2px;
-          height: 80%;
-          transform: translateY(-50%);
+    }
+    &__group {
+      flex-direction: column;
+      gap: 84px;
+      border: unset;
+      position: relative;
+      z-index: 2;
+      .dropdown {
+        position: relative;
+        z-index: 1;
+        &:nth-child(1) {
+          z-index: 2;
         }
-
-        &:hover {
-          &:after {
-            width: 2px;
-            height: 100%;
-          }
+        &:nth-child(3) {
+          z-index: 0;
         }
       }
     }
-
     &.active {
       pointer-events: all;
       transform: translate(0);
@@ -223,6 +238,13 @@
         transition: 0.3s ease-in-out 0.05s;
         transform: translate(0);
       }
+    }
+  }
+}
+@mixin header-460 {
+  .nav {
+    &__inner {
+      width: 100%;
     }
   }
 }

@@ -24,7 +24,7 @@
   input,
   textarea,
   &__selected {
-    padding: 1.45em 1.38em;
+    padding: 1.42em 1.38em;
     border-radius: 1.1em;
     width: 100%;
     background-color: transparent;
@@ -532,3 +532,23 @@
     color: $primary;
   }
 }
+
+@mixin components-1160 {
+  .logo {
+    font-size: 26px;
+  }
+}
+@mixin components-1025 {
+  .logo {
+    font-size: 24px;
+  }
+  .main{
+    padding-top: 95px;
+  }
+}
+@mixin components-460 {
+  .logo {
+    font-size: 20px;
+  }
+}
+

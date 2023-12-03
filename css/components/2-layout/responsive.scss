@@ -1,26 +1,33 @@
+@media (max-width: 1360px) {
+}
 @media (max-width: 1280px) {
+  @include index-1280;
+  @include footer-1280;
 }
 @media (max-width: 1160px) {
-  .autoContainer {
-    padding: 0 40px;
-  }
+  @include components-1160;
+  @include header-1160;
+  @include index-1160;
 }
 @media (max-width: 1025px) {
   .autoContainer {
-    padding: 0 30px;
-  }
-  @include header-1025;
-}
-
-@media (max-width: 940px) {
-  .autoContainer {
     padding: 0 25px;
   }
+  @include components-1025;
+  @include header-1025;
+}
+@media (max-width: 940px) {
+  @include footer-940;
+}
+@media (max-width: 860px) {
+  @include index-860;
 }
 @media (max-width: 768px) {
   .autoContainer {
-    padding: 0 15px;
+    padding: 0 20px;
   }
+  @include index-768;
+  @include footer-768;
 }
 @media (max-width: 580px) {
   ._hideMob {
@@ -28,4 +35,7 @@
   }
 }
 @media (max-width: 460px) {
+  @include components-460;
+  @include header-460;
+  @include index-460;
 }
